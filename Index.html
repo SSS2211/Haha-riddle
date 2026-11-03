@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body { background:#0b0b0f; color:#fff; font-family:sans-serif;
+           text-align:center; padding:40px 20px; }
+    button { display:block; width:100%; margin:12px 0; padding:16px;
+             font-size:18px; border:0; border-radius:12px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h1>Why so serious?</h1>
+  <p id="msg">Choose wisely...</p>
+  <div id="choices">
+    <button onclick="pick('channel')">Channel</button>
+    <button onclick="pick('store')">Store</button>
+  </div>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.ready(); tg.expand();
+
+    function pick(choice) {
+      if (choice === "channel") {
+        tg.openTelegramLink("https://t.me/+5jfzz8Hh1ZxkZjU8");
+      } else {
+        window.location.href = "https://t.me/thehahaclub_bot/THECLUB";
+      }
+    }
+  </script>
+</body>
+</html>
